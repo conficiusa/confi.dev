@@ -51,7 +51,7 @@ function HeroPost({
       </Link>
       <div className="mb-20 md:mb-28 md:grid md:grid-cols-2 md:gap-x-16 lg:gap-x-8">
         <div>
-          <h3 className="text-pretty mb-4 text-4xl leading-tight lg:text-6xl">
+          <h3 className="text-pretty mb-4 text-4xl leading-tight lg:text-6xl px-3">
             <Link href={`/posts/${slug}`} className="hover:underline">
               {title}
             </Link>
