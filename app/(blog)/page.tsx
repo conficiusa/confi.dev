@@ -23,7 +23,7 @@ function Intro(props: { title: string | null | undefined; description: any }) {
       <h1 className="text-balance text-6xl font-bold leading-tight tracking-tighter lg:pr-8 lg:text-8xl">
         {title || demo.title}
       </h1>
-      <h2 className="text-pretty mt-5 text-center text-lg lg:pl-8 lg:text-left">
+      <h2 className="text-pretty mt-5 text-center text-sm lg:pl-8 lg:text-left sr-only">
         <PortableText
           className="prose-lg"
           value={description?.length ? description : demo.description}

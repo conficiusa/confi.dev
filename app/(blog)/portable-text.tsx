@@ -7,7 +7,7 @@
  * https://portabletext.org/
  *
  */
-
+import CodeBlocks from "./codeBlocks";
 import {
   PortableText,
   type PortableTextComponents,
@@ -22,6 +22,11 @@ export default function CustomPortableText({
   value: PortableTextBlock[];
 }) {
   const components: PortableTextComponents = {
+    types: {
+      code: ({ value }: any) => {
+        return <CodeBlocks value={value} />;
+      },
+    },
     block: {
       h5: ({ children }) => (
         <h5 className="mb-2 text-sm font-semibold">{children}</h5>
@@ -30,6 +35,7 @@ export default function CustomPortableText({
         <h6 className="mb-1 text-xs font-semibold">{children}</h6>
       ),
     },
+
     marks: {
       link: ({ children, value }) => {
         return (

@@ -2,6 +2,7 @@
 /**
  * This config is used to set up Sanity Studio that's mounted on the `app/(sanity)/studio/[[...tool]]/page.tsx` route
  */
+import { codeInput } from "@sanity/code-input";
 import { visionTool } from "@sanity/vision";
 import { PluginOptions, defineConfig } from "sanity";
 import { unsplashImageAsset } from "sanity-plugin-asset-source-unsplash";
@@ -40,6 +41,7 @@ export default defineConfig({
     ],
   },
   plugins: [
+    codeInput(),
     presentationTool({
       resolve: {
         mainDocuments: defineDocuments([

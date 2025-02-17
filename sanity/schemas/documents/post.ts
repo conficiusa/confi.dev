@@ -44,7 +44,27 @@ export default defineType({
       name: "content",
       title: "Content",
       type: "array",
-      of: [{ type: "block" }],
+      of: [
+        { type: "block" },
+        {
+          type: "code",
+          name: "code",
+          title: "Code Blocks",
+          options: {
+            languageAlternatives: [
+              { title: "", value: "" },
+              { title: "Javascript", value: "javascript" },
+              { title: "HTML", value: "html" },
+              { title: "CSS", value: "css" },
+              { title: "React", value: "react" },
+              { title: "Node", value: "node" },
+              { title: "MySql", value: "mysql" },
+              { title: "ZH", value: "zh", mode: "sh" },
+            ],
+            withFilename: true,
+          },
+        },
+      ],
     }),
     defineField({
       name: "excerpt",
